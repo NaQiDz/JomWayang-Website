@@ -1,0 +1,554 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+:root{
+	--primary: #ff3700;
+}
+body{
+	background: #000000;
+	font-family: 'Poppins',sans-serif;
+}
+.banner{
+	position: relative;
+  width: 100%;
+  min-height: 100vh;
+  padding: 0 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+  transition: background-image 0.5s ease; 
+}
+
+.banner::before {
+	position: absolute;
+	content: '';
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.5);
+}
+.content{
+	position: relative;
+	max-width: 550px;
+	display: none;
+	visibility: hidden;
+	transform: scale(0);
+	transition: 0.5s;
+}
+.content.active{
+	display: block;
+	visibility: visible;
+	transition: 0.5s;
+	transform: scale(1.0);
+}
+.movie-title{
+	max-width: 250px;
+}
+
+.banner .content h4{
+	color: white;
+	font-weight: 400;
+	font-size: 20px;
+}
+.banner .content h4 span{
+	padding: 0 10px;
+	border-right: 1px solid rgba(255, 255, 255, 0.5);
+}
+.banner .cotent h4 span:first-child{
+	padding-left: 0;
+}
+.banner .content h4 span:last-child{
+	border-right: none;
+}
+.banner .content h4 span i{
+	background: var(--primary);
+	color: var(--secondary);
+}
+.banner .content p{
+	font-size: 1em;
+	font-weight: 300;
+	line-height: 1.5em;
+	color: #ffffff;
+	margin: 10px 0 20px;
+}
+.banner .content .button a{
+	position: relative;
+	display: inline-block;
+	margin-right: 10px;
+	background: var(--primary);
+	color: #ffffff;
+	padding: 6px 20px;
+	text-decoration: none;
+	font-weight: 500;
+	text-transform: uppercase;
+	transition: 0.5s;
+	cursor: pointer;
+}
+.banner .content .button a:nth-child(2){
+	background: rgba(0, 0, 0, 0.5);
+	border: 1px solid rgba(255, 255, 255, 0.2);
+}
+.banner .content .button a:hover:nth-child(2){
+	background: rgba(0, 0, 0, 0.5);
+	border-right: 1px solid rgba(255, 255, 255, 0.2);
+}
+.banner .carousel-box{
+	position: relative;
+	min-width: 850px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: rgba(0, 0, 0, 0.1);
+
+}
+
+.carousel{
+	position: relative;
+	height: 420px;
+	perspective: 500px;
+}
+.carousel .carousel-item{
+	width: 250px;
+	cursor: pointer;
+}
+.carousel .carousel-item img{
+	max-width: 200px;
+	border-radius: 10px;
+	transform: translateX(8px) translateY(-100px);
+	object-fit: cover;
+	object-position: center;
+}
+.play{
+	position: absolute;
+	bottom: 50px;
+	left: 100px;
+	display: inline-flex;
+	justify-content: flex-start;
+	align-items: center;
+	color: #ffffff;
+	text-transform: uppercase;
+	font-weight: 500;
+	letter-spacing: 1px;
+	font-size: 1.2em;
+	cursor: pointer !important;
+	transition: 0.3s;
+}
+.play i{
+	margin-right: 10px;
+	font-size: 40px;
+	cursor: pointer !important;
+}
+.play:hover{
+	color: var(--primary);
+}
+.sci{
+	position: absolute;
+	bottom: 50px;
+	right: 100px;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	gap: 25px;
+}
+.sci a{
+	color: #ffffff;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-weight: 500;
+	letter-spacing: 1px;
+	font-size: 25px;
+	transition: 0.3s;
+	cursor: pointer;
+}
+.sci a:hover{
+	color: var(--primary);
+}
+
+.container {
+  width: 90%; /* Adjust as needed for more or less space */
+  max-width: 1200px; /* Ensure content doesn't stretch too wide on large screens */
+  margin: 0 auto; /* Center the container horizontally */
+  background-color: #000000;
+}
+
+/* Header Styling */
+.header-movie-container{
+  padding: 20px;
+  border-bottom: 3px solid red;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header-movie-card{
+  background-color: transparent;
+}
+
+.title {
+  font-size: 30px;
+  color: #fff;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.menu a {
+  text-decoration: none;
+  color: #ff4444;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.menu a:hover {
+  color: #fff;
+}
+
+nav .nav-movie-card ul{
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+nav.nav-movie-card a {
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav.nav-movie-card a .active{
+	color: #ff4444;
+}
+
+nav.nav-movie-card a:not(.active){
+	color: white;
+}
+
+nav.nav-movie-card a:hover{
+	color: red;
+	transition: width 0.3s ease;
+}
+
+.movie-gallery {
+  display: grid; /* Use grid for proper alignment */
+  grid-template-columns: repeat(4, 1fr); /* Maximum of 4 cards per row */
+  gap: 40px; /* Space between movie cards */
+  padding: 10px;
+  justify-content: center; /* Center the entire gallery */
+  margin-top: 20px;
+}
+
+.movie-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: #222;
+  padding: 0px;
+  border-radius: 10px;
+  height: 390px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  position: relative; /* To position the overlay properly */
+  overflow: hidden; /* Prevent content from overflowing the card */
+}
+
+.movie-card img {
+  width: 100%;
+  height: 100%; /* Ensure it fills the container */
+  border-radius: 10px;
+  transition: opacity 0.3s ease;
+}
+
+.movie-card img:hover {
+  opacity: 0.3;
+}
+
+.movie-card .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6); /* Semi-transparent black background */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-size: 18px;
+  opacity: 0; /* Initially hidden */
+  transition: opacity 0.3s ease;
+  border-radius: 10px;
+}
+
+.movie-card:hover .overlay {
+  opacity: 1; /* Show on hover */
+}
+
+.movie-card .overlay h3 {
+  margin: 0 0 10px;
+}
+
+.movie-card .overlay button {
+  background-color: #ff4444;
+  border: none;
+  padding: 10px 20px;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.movie-card .overlay button:hover {
+  background-color: #ff2222;
+}
+
+
+.movie-card h3 {
+  font-size: 18px;
+  color: #fff;
+}
+
+.movie-card.placeholder {
+  background-color: #444; /* Placeholder background color */
+  display: flex; /* Center placeholder content */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  height: 390px;
+  border-radius: 10px;
+  position: relative; /* Make it the parent for absolute positioning */
+}
+
+.movie-card.placeholder img {
+  opacity: 0.3; /* Set the image opacity to make it semi-transparent */
+  width: 100%; /* Ensure the image fits properly */
+  border-radius: 10px; /* Match the card's border radius */
+}
+
+.movie-card.placeholder::before {
+  content: "Coming Soon"; /* Placeholder text */
+  font-size: 18px;
+  color: white;
+  position: absolute; /* Allow absolute positioning */
+  top: 50%; /* Center vertically */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Adjust position to the true center */
+  text-align: center; /* Center-align the text */
+}
+
+
+@media (max-width: 1024px) {
+  .movie-gallery {
+    grid-template-columns: repeat(3, 1fr); /* 3 cards per row for medium screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .movie-gallery {
+    grid-template-columns: repeat(2, 1fr); /* 2 cards per row for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .movie-gallery {
+    grid-template-columns: 1fr; /* 1 card per row for very small screens */
+  }
+}
+
+
+.pagination {
+  text-align: center;
+  margin: 20px 0;
+  margin-bottom: 40px;
+}
+
+.pagination a {
+  margin: 0 5px;
+  text-decoration: none;
+  color: #ff4444;
+  font-weight: bold;
+}
+
+.pagination a:hover {
+  color: white;
+}
+
+/* Styling for Top 10 Movies Section */
+.top-movies {  
+  margin-top: 40px;
+  padding: 20px;
+  color: #fff; /* White text color */
+  border-top: 3px solid red;
+  margin-bottom: 60px;
+}
+
+.top-movies h2 {
+  text-align: center;
+  margin-bottom: 50px;
+  font-size: 24px;
+}
+
+/* Styling for the ordered list */
+.top-movies ol {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 columns */
+  gap: 15px; /* Space between the list items */
+  padding-left: 0;
+}
+
+.top-movies li {
+  padding: 10px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between; /* Align text and the link */
+  align-items: center;
+}
+
+.top-movies ol > li:nth-child(1n) {
+  border-bottom: 2px solid #ff4444; /* Red border at the bottom of each row */
+}
+
+.top-movies ol > li:nth-child(2n) {
+  border-bottom: 2px solid #ff4444; /* Red border at the bottom of each row */
+}
+
+.top-movies a {
+  color: #ff4444;
+  text-decoration: none;
+}
+
+.top-movies a:hover {
+  text-decoration: underline;
+}
+
+
+/* Footer Styling */
+.footer {
+  background-color: #222; /* Dark background color */
+  color: #fff;
+  padding: 40px 20px;
+}
+
+/* Container for the footer sections */
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Left Section Styling */
+.footer-left ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-left ul li {
+  margin: 10px 0;
+}
+
+.footer-left ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+.footer-left ul li a:hover {
+  color: #ff4444;
+}
+
+/* Middle Section Styling */
+.footer-middle p {
+  margin: 5px 0;
+  font-size: 14px;
+  color: #bbb;
+}
+
+.support-btn {
+  background-color: #ff4444;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 16px;
+  margin-top: 10px;
+  display: inline-block;
+}
+
+.support-btn:hover {
+  background-color: #ff2222;
+}
+
+/* Right Section Styling */
+.footer-right p {
+  font-size: 14px;
+  color: #bbb;
+  margin-bottom: 10px;
+}
+
+.footer-right ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-right ul li {
+  margin: 10px 0;
+}
+
+.footer-right ul li a {
+  text-decoration: none;
+  color: #ff4444;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+.footer-right ul li a:hover {
+  color: #ff2222;
+}
+
+/* Footer Bottom Styling */
+.footer-bottom {
+  text-align: center;
+  padding: 10px;
+  border-top: 2px solid white;
+}
+
+.footer-bottom p {
+  margin: 5px 0;
+  font-size: 14px;
+  color: #bbb;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    text-align: left;
+  }
+
+  .footer-left, .footer-middle, .footer-right {
+    flex: none;
+    margin-bottom: 5px;
+  }
+}
+

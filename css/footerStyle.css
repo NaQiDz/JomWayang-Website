@@ -1,0 +1,113 @@
+/* Footer Styling */
+.footer {
+    background-color: #222; /* Dark background color */
+    color: #fff;
+    padding: 40px 20px;
+  }
+  
+  /* Container for the footer sections */
+  .footer-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  /* Left Section Styling */
+  .footer-left ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .footer-left ul li {
+    margin: 10px 0;
+  }
+  
+  .footer-left ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+    transition: color 0.3s ease;
+  }
+  
+  .footer-left ul li a:hover {
+    color: #ff4444;
+  }
+  
+  /* Middle Section Styling */
+  .footer-middle p {
+    margin: 5px 0;
+    font-size: 14px;
+    color: #bbb;
+  }
+  
+  .support-btn {
+    background-color: #ff4444;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+    margin-top: 10px;
+    display: inline-block;
+  }
+  
+  .support-btn:hover {
+    background-color: #ff2222;
+  }
+  
+  /* Right Section Styling */
+  .footer-right p {
+    font-size: 14px;
+    color: #bbb;
+    margin-bottom: 10px;
+  }
+  
+  .footer-right ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .footer-right ul li {
+    margin: 10px 0;
+  }
+  
+  .footer-right ul li a {
+    text-decoration: none;
+    color: #ff4444;
+    font-size: 16px;
+    transition: color 0.3s ease;
+  }
+  
+  .footer-right ul li a:hover {
+    color: #ff2222;
+  }
+  
+  /* Footer Bottom Styling */
+  .footer-bottom {
+    text-align: center;
+    padding: 10px;
+    border-top: 2px solid white;
+  }
+  
+  .footer-bottom p {
+    margin: 5px 0;
+    font-size: 14px;
+    color: #bbb;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .footer-container {
+      flex-direction: column;
+      text-align: left;
+    }
+  
+    .footer-left, .footer-middle, .footer-right {
+      flex: none;
+      margin-bottom: 5px;
+    }
+  }

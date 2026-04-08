@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+body{background-color: black;}
+header {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 30px 100px;
+	z-index: 10;
+}
+header.scrolled {
+    position: sticky;
+		top: 0;
+		left: 0;
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 10px 100px;
+		z-index: 10;
+		background-color: black;
+}
+.logo{
+	font-size: 30px;
+	color: #ffffff;
+	letter-spacing: 1px;
+	font-weight: 800;
+	z-index: 20;
+}
+.nav{
+	display: flex;
+}
+.nav li{
+	list-style: none;
+	margin: 0 10px;
+}
+.nav li a{
+	color: #ffffff;
+	text-decoration: none;
+	font-weight: 500;
+	letter-spacing: 1px;
+	cursor: pointer;
+	transition: 0.3s;
+}
+.nav li:hover a{
+	color: var(--primary);
+}
+.search{
+	position: relative;
+	width: 300px;
+	height: 40px;
+}
+.search input{
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	color: #ffffff;
+	background: transparent;
+	border: 1 solid rgba(255, 255, 255, 0.5);
+	outline: none;
+	border-radius: 4px;
+	padding: 0 10px 0 45px !important;
+	backdrop-filter: blur(10px);
+}
+.search input::placeholder{
+	color: #ffffff;
+}
+.search i{
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	left: 10px;
+	padding-right: 10px;
+	color: #ffffff;
+	border-right: 1px solid !important;
+}
+
+/* Profile Container */
+.profile {
+    position: relative; /* For dropdown positioning */
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.profile img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%; /* Ensures a perfect circular shape */
+    object-fit: cover; /* Keeps the image proportions intact */
+    border: 2px solid rgba(255, 255, 255, 0.5); /* Adds a subtle border */
+    transition: transform 0.3s ease, border-color 0.3s ease; /* Smooth hover animations */
+}
+
+.profile img:hover {
+    transform: scale(1.1); /* Slight zoom effect on hover */
+    border-color: var(--primary, #e50914); /* Highlights border on hover */
+}
+
+
+/* User Icon */
+.profile i {
+    font-size: 40px;
+    color: #ffffff;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.profile i:hover {
+    transform: scale(1.0);
+    color: var(--primary, #e50914); /* Primary color theme */
+}
+
+.profile img:hover {
+    transform: scale(1.2);
+    color: var(--primary, #e50914); /* Primary color theme */
+}
+
+/* Dropdown Menu */
+.dropdown {
+    position: absolute;
+    top: 40px; /* Distance from the icon */
+    left: 50%; /* Centered below the icon */
+    transform: translateX(-50%);
+    display: none; /* Hidden by default */
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black */
+    border-radius: 8px;
+    padding: 20px 45px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    z-index: 100; /* Ensure it appears above other elements */
+}
+
+/* Dropdown Buttons */
+.dropdown a {
+    background-color: transparent; /* Primary theme color */
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    padding: 15px 30px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    text-decoration: none;
+}
+
+.dropdown a:hover {
+    background-color: transparent; /* Lighter red for hover */
+    color: red;
+    transform: scale(1.05);
+}
+
+/* Show Dropdown on Hover */
+.profile:hover .dropdown {
+    display: flex; /* Display dropdown when hovering */
+}

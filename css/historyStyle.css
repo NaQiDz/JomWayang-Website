@@ -1,0 +1,201 @@
+.banner{
+    position: relative;
+    width: 100%;
+    min-height: 10vh;
+    padding: 0 100px;
+    margin-bottom: 60px;
+}
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000;
+    margin-bottom: 20px;
+}
+.booking-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+    padding: 10px 20px;
+    width: 80%;
+    max-width: 800px;
+    position: relative;
+}
+.booking-text {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    margin-right: 10px;
+}
+.check-icon {
+    background-color: green;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 10px;
+}
+.check-icon i {
+    color: white;
+    font-size: 14px;
+}
+.arrow-icon {
+    width: 0; 
+    height: 0; 
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 6px solid #ccc;
+    position: absolute;
+    right: 20px;
+}
+.containerv2{
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+}
+.ticket {
+    display: flex;
+    background: linear-gradient(135deg, #1d1d1d, #292929); /* Subtle gradient for depth */
+    border-radius: 20px;
+    overflow: hidden;
+    width: 70%;
+    max-width: 1000px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5); /* Shadow for a floating effect */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.ticket:hover {
+    transform: translateY(-5px); /* Slight lift on hover */
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.7); /* More prominent shadow on hover */
+}
+
+.ticket img {
+    width: 300px;
+    height: auto;
+    border-radius: 10px 0 0 10px;
+    object-fit: cover;
+}
+
+.ticket-details {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.ticket-details h1 {
+    font-size: 28px; /* Slightly larger for emphasis */
+    margin-bottom: 5px;
+    margin-top: 5px;
+    color: #ff4747; /* Bright red for the title */
+    text-shadow: 0 2px 5px rgba(255, 71, 71, 0.5); /* Glow effect */
+}
+
+.ticket-details p {
+    line-height: 1.6;
+    margin-bottom: 5px;
+    color: #ddd; /* Softer text color for readability */
+}
+
+.ticket-details strong {
+    color: white;
+    font-weight: bold;
+}
+
+.ticket-details .highlight {
+    color: red; /* Vivid red for highlights */
+    font-weight: bold;
+}
+
+.ticket-details .total {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #444;
+    padding-top: 10px;
+    margin-top: 10px;
+    font-size: 18px;
+    color: white;
+}
+
+.slot-place {
+    display: flex;
+    align-items: center;
+    gap: 50px; /* Reduced gap for a tighter layout */
+    margin-top: 15px; /* Add some spacing above */
+}
+
+.slot-place p {
+    margin: 0;
+    text-align: center;
+    color: #ccc; /* Muted text color for secondary info */
+}
+
+.slot-place .highlight {
+    font-size: 18px; /* Slightly larger for better visibility */
+    color: #ff4747; /* Matches the title color */
+}
+.qr-code img {
+    border: 2px solid #444; /* Subtle border around QR code */
+    border-radius: 10px;
+    padding: 5px;
+    background: white /* Background contrast */
+}
+.print-code{
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Reduced gap for a tighter layout */
+    margin-top: 15px; /* Add some spacing above */
+}
+.qr-code button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background: #ff3333;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s;
+}
+
+.qr-code button:hover {
+    background: #cc0000;
+    transform: translateY(-3px);
+}
+
+.qr-code button:active {
+    transform: translateY(0);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .ticket {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .ticket img {
+        border-radius: 20px 20px 0 0;
+        width: 100%;
+    }
+
+    .slot-place {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .ticket-details h1 {
+        font-size: 24px;
+    }
+
+    .ticket-details .total {
+        font-size: 16px;
+    }
+}
