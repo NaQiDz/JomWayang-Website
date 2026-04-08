@@ -1,0 +1,156 @@
+/* Reset and Base Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    display: flex;
+    height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 250px;
+    background-color: #222;
+    color: #fff;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.sidebar h2 {
+    color: #1E90FF;
+    margin-bottom: 30px;
+    font-size: 24px;
+}
+.sidebar a {
+    text-decoration: none;
+    color: #fff;
+    padding: 15px;
+    width: 100%;
+    text-align: center;
+    font-size: 16px;
+    display: block;
+}
+.sidebar a:hover,
+.sidebar a.active {
+    background-color: #1E90FF;
+}
+
+/* Main Content */
+.main-content {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+}
+.header {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Form Styling */
+form {
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+form h3 {
+    margin-bottom: 15px;
+    color: #1E90FF;
+}
+.form-group {
+    margin-bottom: 15px;
+}
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+}
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+.form-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+.form-group button {
+    background-color: #1E90FF;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+.form-group button:hover {
+    background-color: #1472cc;
+}
+
+/* Table Style */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+table,
+th,
+td {
+    border: 1px solid #ddd;
+}
+th,
+td {
+    padding: 12px;
+    text-align: left;
+}
+th {
+    background-color: #1E90FF;
+    color: white;
+}
+.btn {
+    padding: 8px 12px;
+    background-color: #1E90FF;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 14px;
+    text-align: center;
+    cursor: pointer;
+}
+.btn:hover {
+    background-color: #1472cc;
+}
+
+/* Edit Button Specific Styles */
+.btn-edit {
+    background-color: #f39c12;
+}
+.btn-edit:hover {
+    background-color: #d78b0b;
+}
+
+/* Delete Button Specific Styles */
+.btn-delete {
+    background-color: #e74c3c;
+}
+.btn-delete:hover {
+    background-color: #c0392b;
+}
